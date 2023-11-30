@@ -1,12 +1,19 @@
-import React from 'react'
-import * as defaultTheme from '../theme'
+import { FC, createContext } from "react";
+import { ThemeProviderProps } from "../types";
+import { themes as defaultThemes } from "../themes";
 
-export interface ThemeContextInterface<T> {
-  theme: T
+interface ThemeContextInterface<T> {
+  styles: T;
 }
 
-export const ThemeContext = React.createContext<
-  ThemeContextInterface<typeof defaultTheme>
+export const ThemeContext = createContext<
+  ThemeContextInterface<typeof defaultThemes>
 >({
-  theme: defaultTheme
-})
+  styles: defaultThemes,
+});
+
+export const ThemeProvider: FC<ThemeProviderProps> = ({ children, value }) => {
+  return (
+    <ThemeContext.Provider value={value}>{children}</ThemeContext.Provider>
+  );
+};

@@ -1,4 +1,10 @@
-import * as DEFAULT_THEME from './theme'
+import { ReactNode } from "react";
 
-export type DeepPartial<T> = Partial<{ [P in keyof T]: DeepPartial<T[P]> }>
-export type TPlaybookDefaultTheme = DeepPartial<typeof DEFAULT_THEME>
+export type ThemeProviderProps = {
+  children?: ReactNode;
+  value?: any;
+};
+
+export type ThemeProps<T> = {
+  theme: T;
+};
