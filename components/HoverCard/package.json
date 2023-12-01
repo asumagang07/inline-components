@@ -1,5 +1,5 @@
 {
-  "name": "@inline/spinner",
+  "name": "@inline/hovercard",
   "version": "0.0.0",
   "main": "./dist/index.js",
   "module": "./dist/index.mjs",
@@ -31,6 +31,9 @@
     "access": "public"
   },
   "dependencies": {
+    "@inline/spinner": "workspace:^",
+    "@radix-ui/colors": "^3.0.0",
+    "@radix-ui/react-hover-card": "^1.0.7",
     "classnames": "^2.3.2",
     "react-icons": "^4.12.0",
     "styled-components": "^5.3.6"
