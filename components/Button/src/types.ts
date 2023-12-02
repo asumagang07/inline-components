@@ -2,7 +2,7 @@ import { DefaultColorEnum, DefaultSize } from "@inline/tailwind-config";
 
 export interface ButtonProps
   extends React.ButtonHTMLAttributes<HTMLButtonElement> {
-  children: React.ReactNode;
+  children?: React.ReactNode;
   label?: string;
   variant?: "solid" | "outlined" | "flat";
   noBaseStyle?: boolean;
