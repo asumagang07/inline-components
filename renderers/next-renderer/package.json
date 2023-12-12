@@ -15,6 +15,7 @@
     "@inline/hovercard": "workspace:^",
     "@inline/paper": "workspace:^",
     "@inline/popover": "workspace:^",
+    "@inline/slider": "workspace:^",
     "@inline/spinner": "workspace:^",
     "@inline/tailwind-config": "workspace:*",
     "animate.css": "^4.1.1",

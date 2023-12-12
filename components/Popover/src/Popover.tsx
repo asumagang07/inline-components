@@ -20,8 +20,8 @@ const InlinePopover: FC<PopoverProps> = (props) => {
       <Popover.Portal>
         <Popover.Content
           className="rounded border p-5 w-[260px] bg-white shadow-lg will-change-[transform,opacity]
-animatecss data-[state=open]:data-[side=top]:animatecss-fadeOutDown
- data-[state=open]:data-[side=right]:animatecss-fadeOutLeft data-[state=open]:data-[side=bottom]:animatecss-fadeInUp data-[state=open]:data-[side=left]:animatecss-fadeOutRight"
+animatecss data-[state=open]:data-[side=top]:animatecss-slideOutDown
+ data-[state=open]:data-[side=right]:animatecss-slideOutLeft data-[state=open]:data-[side=bottom]:animatecss-slideInUp data-[state=open]:data-[side=left]:animatecss-slideOutRight"
           sideOffset={5}
         >
           Popover Content
