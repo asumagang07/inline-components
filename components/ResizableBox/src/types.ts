@@ -6,4 +6,5 @@ export interface ResizableBoxProps extends Omit<ResizableProps, "enable"> {
   className?: string;
   children?: ReactNode;
   handle?: Enable | false;
+  color?: keyof typeof DefaultColorEnum;
 }

@@ -5,6 +5,7 @@ export { cardStyles } from "./cardStyles";
 export { hoverCardStyles } from "./hoverCardStyles";
 export { imageStyles } from "./imageStyles";
 export { navStyles } from "./navStyles";
+export { resizableBoxStyles } from "./resizableBoxStyles";
 export { sliderStyles } from "./sliderStyles";
 export { stepperStyles } from "./stepperStyles";
 export { tabStyles } from "./tabStyles";
