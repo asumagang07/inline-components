@@ -6,7 +6,7 @@ const meta: Meta<typeof ResizableBox> = {
   component: ResizableBox,
   //👇 Enables auto-generated documentation for the component story
   tags: ["autodocs"],
-  title: "Components/ResizableBox",
+  title: "Components/Resizable Box",
   argTypes: {
     color: {
       defaultValue: "purple",

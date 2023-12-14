@@ -8,6 +8,18 @@ const meta: Meta<typeof Button> = {
   tags: ["autodocs"],
   title: "Components/Button",
   argTypes: {
+    label: {
+      defaultValue: "Button",
+      description: "Where you can define the label of the component.",
+      type: "string",
+    },
+    size: {
+      defaultValue: "default",
+      description:
+        "Property that defines the size of the component or a selection",
+      options: ["sm", "default", "md", "lg"],
+      control: { type: "select" },
+    },
     variant: {
       defaultValue: "solid",
       description: "Changes the variation of the element. ",

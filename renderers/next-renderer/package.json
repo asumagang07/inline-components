@@ -12,6 +12,7 @@
   },
   "dependencies": {
     "@inline/button": "workspace:*",
+    "@inline/dropdownmenu": "workspace:^",
     "@inline/hovercard": "workspace:^",
     "@inline/paper": "workspace:^",
     "@inline/popover": "workspace:^",

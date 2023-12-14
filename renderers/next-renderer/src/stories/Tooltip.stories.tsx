@@ -35,8 +35,16 @@ type Story = StoryObj<typeof Tooltip>;
 export const Default: Story = {
   render: (args: any) => <Tooltip {...args} />,
   args: {
-    color: "purple",
+    color: "default",
     trigger: <Button icon={<HiOutlinePlus />} />,
     content: "Add user",
+  },
+};
+
+export const WithoutArrow: Story = {
+  render: (args: any) => <Tooltip {...args} />,
+  args: {
+    ...Default.args,
+    withArrow: false,
   },
 };

@@ -6,25 +6,38 @@ import * as RTooltip from "@radix-ui/react-tooltip";
 import { HiOutlinePlus } from "react-icons/hi";
 
 const Tooltip: FC<ITooltipProps> = (props) => {
-  const { className, color = "default", trigger, content } = props;
+  const {
+    className,
+    color = "default",
+    trigger,
+    content,
+    withArrow = true,
+    open,
+  } = props;
 
   const {
     styles: {
-      sliderStyles: { rootCls },
+      tooltipStyles: { rootCls },
     },
   } = useContext(ThemeContext);
 
   return (
     <RTooltip.Provider>
-      <RTooltip.Root>
+      <RTooltip.Root open={open}>
         <RTooltip.Trigger asChild>{trigger}</RTooltip.Trigger>
         <RTooltip.Portal>
           <RTooltip.Content
-            className="data-[state=delayed-open]:data-[side=top]:animate-slideDownAndFade data-[state=delayed-open]:data-[side=right]:animate-slideLeftAndFade data-[state=delayed-open]:data-[side=left]:animate-slideRightAndFade data-[state=delayed-open]:data-[side=bottom]:animate-slideUpAndFade text-white select-none rounded-sm bg-default-950 py-2 px-3 text-xs leading-none shadow-md will-change-[transform,opacity]"
+            className={cn(
+              "data-[state=delayed-open]:data-[side=top]:animate-slideDownAndFade data-[state=delayed-open]:data-[side=right]:animate-slideLeftAndFade data-[state=delayed-open]:data-[side=left]:animate-slideRightAndFade data-[state=delayed-open]:data-[side=bottom]:animate-slideUpAndFade select-none rounded-sm  py-2 px-3 text-xs leading-none shadow-md will-change-[transform,opacity]",
+              rootCls.colors[color],
+              className
+            )}
             sideOffset={5}
           >
             {content}
-            <RTooltip.Arrow className="fill-default-950" />
+            {withArrow && (
+              <RTooltip.Arrow className={cn(rootCls.arrowCls.colors[color])} />
+            )}
           </RTooltip.Content>
         </RTooltip.Portal>
       </RTooltip.Root>

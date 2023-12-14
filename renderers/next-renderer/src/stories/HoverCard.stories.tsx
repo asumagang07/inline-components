@@ -7,7 +7,7 @@ const meta: Meta<typeof HoverCard> = {
   component: HoverCard,
   //👇 Enables auto-generated documentation for the component story
   tags: ["autodocs"],
-  title: "Components/HoverCard",
+  title: "Components/Hover Card",
   argTypes: {},
 };
 

@@ -7,4 +7,5 @@ export interface ITooltipProps extends TooltipProps {
   color?: keyof typeof DefaultColorEnum;
   trigger?: ReactNode;
   content?: ReactNode;
+  withArrow?: boolean;
 }
